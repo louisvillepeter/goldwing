@@ -11,7 +11,7 @@ stones = total_pounds//14
 
 print ('you weight {:.0f} ducks or {:.0f}  withces or {:.0f} stones '.format(ducks, witches, stones))
 
-print (" Stop! Who would cross the Bridge of Death must answer me these questions three, ere the other side he see..")
+print (" Stop! Who would cross the Bridge of Death must answer me these questions three, ere the other side he see..    ")
 #quest = input('what is your quest?')
 
 
@@ -24,30 +24,30 @@ def convert(total_pounds):
 name = ""
 
 while name != True:
-    name = input('what is your name? (Please type one of the following: Arthur, Lancelot, Robin, Belvedere, Galahad or Exit to leave)   ')
+    name = input('what is your name? (Please type one of the following: Arthur, Lancelot, Robin, Bedevere, Galahad or Exit to leave)   ')
     name = name.lower()
     if name == "arthur":
-        print("Arthur, King of the Britons", 3, "I seek the grail","I am your king")
+        x = 0
         break
 
     elif name == "lancelot":
-        print( "Sir Lancelot the Brave", 3, "I seek the grail","I am your king" )
+        x = 1
         break
 
     elif name == "patsy":
-        print("Patsy", 3, "I seek the grail","I am your king")
+        x = 2
         break
 
     elif name == "robin":
-        print("Sir Robin the Not-Quite-So-Brave-as-Sir-Lancelot", 3, "I seek the grail","I am your king")
+        x = 3
         break
 
-    elif name == "belvedere":
-        print ("Sir Bedevere the Wise", 3, "I seek the grail","I am your king") 
+    elif name == "bedevere":
+        x = 4 
         break
 
     elif name == "galahad":
-        print ("Sir Galahad the Pure", 3, "I seek the grail","I am your king")
+        x = 5
         break
 
     elif name == "exit":
@@ -57,16 +57,15 @@ while name != True:
     else:
         print("Allright sonny, that's Enough. Just pack that in. ")
 
-#print ("your name is {} and your quest is {}".format(characters[0], characters[1]))
-characters = {"Arthur" : ["Arthur, King of the Britons", 3, "I seek the grail","I am your king"], 
-    "Lancelot" : ["Sir Lancelot the Brave", 3, "I seek the grail","I am your king" ], 
-    "Patsy" : ["Patsy", 3, "I seek the grail","I am your king" ], 
-    "Robin" : ["Sir Robin the Not-Quite-So-Brave-as-Sir-Lancelot", 3, "I seek the grail","I am your king" ], 
-    "Belvedere" : ["Sir Bedevere the Wise", 3, "I seek the grail","I am your king" ],
-    "Galahad" :["Sir Galahad the Pure", 3, "I seek the grail","I am your king" ] }
 
-print ("{}".format(name.characters))
- 
+
+knight = ["arthur", "lancelot", "patsy", "robin", "belvedere", "galahad"]
+formal_title = ["Arthur, King of the Britons", "Sir Lancelot the Brave", "Patsy", "Sir Robin the Not-Quite-So-Brave-as-Sir-Lancelot", "Sir Bedevere the Wise", "Sir Galahad the Pure" ]
+line1 = ["I am your king", "Look, my liege!", "clomp, climp, clomp","well..actually, I am a knight of the round table.", "Sir! I have a plan, sir.", "Is there someone else up there we could talk to?" ]
+line2 = ["Run away!", "Fiends! I'll tear them apart!", "It's only a model,", "Looks like there's dirty work afoot.", "Oh.... Um, l-look, if we built this large wooden badger..","He says they've already got one!" ]
+line3 = ["You fight with the strength of many men, Sir Knight.", "A blessing from the Lord!", "clomp, climp, clomp","Shut up! Um, n-- n-- n-- nobody, really. I'm j-- j-- j-- ju-- just, um-- just passing through.", "We shall use my largest scales!", " What a strange person."]
+
+print(knight[x], line1[x], formal_title[x], line2[x], line3[x]) 
 
 score = 0
 def math():
